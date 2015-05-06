@@ -1,14 +1,14 @@
 
-//
-// For this trivial demo we have just a unique MainController 
-// for everything
-//
-
-//app.controller('MainController', ['$scope', 'forecast', function($scope, forecast) {
-
-app.controller('MainController', function($rootScope, $scope, loadImages, $firebaseObject){
 
 
+
+app.controller('MainController', function($rootScope, $scope, mySite){
+// Add later to controler ", $firebaseObject"
+
+
+
+/* 
+// FireBase
 // Get a reference to our posts
 var ref = new Firebase("https://popping-heat-9718.firebaseio.com/");
 
@@ -18,15 +18,29 @@ ref.on("value", function(snapshot) {
 
   $scope.products = snapshot.val();
   
-}, function (errorObject) {
-  console.log("The read failed: " + errorObject.code);
-});
+  }, function (errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  });
+*/
+
+
+  // Load Notfound data
+  mySite.success(function(data) {
+    $scope.mySiteData = data
+  });
 
 
 
+/*
+  // Load Image Service
   loadImages.success(function(data) {
     $scope.loadedImages = data;
   });
+*/
+
+
+
+
 
   // User agent displayed in home page
   $scope.userAgent = navigator.userAgent;

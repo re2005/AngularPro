@@ -1,10 +1,9 @@
 var app = angular.module('angularPro', [
   'ngRoute',
   'mobile-angular-ui',
-  'mobile-angular-ui.gestures',
-  'firebase'
+  'mobile-angular-ui.gestures'
+  //'firebase'
 ]);
-
 
 app.config(function($routeProvider) {
   $routeProvider.when('/',              {templateUrl: 'views/home.html', reloadOnSearch: false});
