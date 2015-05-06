@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings":
+		{
+			"less2css":
+			{
+				"autoCompile": true,
+				"lessBaseDir": "./",
+				"main_file": "main.less",
+				"minify": true,
+				"outputDir": "./css",
+				"outputFile": ""
+		}
+	}	
+}
